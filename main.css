@@ -1,70 +1,40 @@
-body{
-      background-image: linear-gradient(to bottom right, #5A827E, #84AE92);
-      background-repeat: no-repeat;
-      display: flex;
-      height: 100vh;
-
-    
+html,
+body {
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-button{
-    background-color: #FFCC00;
-    color: black;
-    border: none;
-    padding: 10px ;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 20px;
-    height: 50px;
-    width: 150px;
-    text-transform: uppercase;
-    align-self: center;
-    align-items: center;
-      
-}
-button:hover{
-    transform: scale(1.001);
-}
-.todo_card{
-    width: 50%;
-    margin: 30px;
-}
+body {
+    background-image: linear-gradient(to bottom right, #5A827E, #84AE92);
+    background-repeat: no-repeat;
 
-.sidebox{
-    width: 50%;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    margin: 30px;
 }
-
-.sidebox,.todo_card{
-    padding: auto;
-}
-.card{
-
-    
+header{
+    background-color: #2C3E50;
     color: white;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 20px;
+    padding: 10px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 1.5em;
+}
+.main_container {
+    background-color: #5A827E;
+    display: flexbox;
+    flex-direction: row;
+}
+
+.todo_card{
+    height: 100%;
+    flex-basis: 50%;
     border: 2px solid #ffffff;
     background-color: #B9D4AA;
-    border-radius: 25px;
-    padding: 50px;
-
-}
-.card_weather{
-    
- height: 50%;
-    
-
-}
-.card_quote{
-    margin: 30px ;
-    height: auto;
 }
 
-.card_quote:hover,.card_weather:hover,.todo_card:hover{
-    transform: scale(1.05);
+.card_weather,.card_qoute {
+    height: 100%;
+    flex-basis: 50%;
+    border: 2px solid #ffffff;
+    background-color: #F0E5D8;
 }

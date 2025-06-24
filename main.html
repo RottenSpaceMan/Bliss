@@ -6,7 +6,13 @@
     <link rel="stylesheet" href="main.css">
     <title>Bliss</title>
 </head>
+
 <body onload="getQuote();loadList();">
+    <header>
+        <h1>Bliss</h1>
+        <p>Welcome to Bliss, your personal productivity app.</p>
+    </header>
+    <div class="main_container">
     <div class="todo_card card">
         <form name="todoForm" autocomplete="off" onsubmit="return validateAndStoreForm()">
             Description: <input type="text" name="Description" placeholder="Description">
@@ -19,9 +25,11 @@
     <div class="sidebox">
         <div class="card_weather card">Weather</div>
         <div class="card_quote card">
+            <h2>Quote Box</h2>
             <p id="quoteBox"></p>
             <button id="quoteButton" onclick=getQuote()>Next</button>
         </div>
+    </div>
     </div>
     <script src="main.js"></script>
 </body>
