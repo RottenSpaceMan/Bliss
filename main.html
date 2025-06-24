@@ -7,20 +7,20 @@
     <title>Bliss</title>
 </head>
 <body onload="getQuote();loadList();">
-    <div class="sidebox">
-        <div class="card">Weather</div>
-        <div class="card">
-            <button id="quoteButton" onclick=getQuote()>Refresh</button>
-            <p id="quoteBox"></p>
-        </div>
-    </div>
-    <div class="card">
+    <div class="todo_card card">
         <form name="todoForm" autocomplete="off" onsubmit="return validateAndStoreForm()">
             Description: <input type="text" name="Description" placeholder="Description">
             <input type="submit" value="Submit">
         </form>
         <div id="todoList">
 
+        </div>
+    </div>
+    <div class="sidebox">
+        <div class="card_weather card">Weather</div>
+        <div class="card_quote card">
+            <p id="quoteBox"></p>
+            <button id="quoteButton" onclick=getQuote()>Next</button>
         </div>
     </div>
     <script src="main.js"></script>
