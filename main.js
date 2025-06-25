@@ -21,10 +21,12 @@ function getQuote() {
         .innerHTML = data[0].quote + "<br><i>-" + data[0].author + "</i>");
 }
 
-function validateAndStoreForm(){
+function validateAndStoreForm(event){
+    if(event) event.preventDefault();
+    document.getElementById("todoError").innerHTML = "";
     x = document.forms["todoForm"]["Description"].value
     if(x == ""){
-        alert("No Description");
+        document.getElementById("todoError").innerHTML = "No Description!!!"
     }
     else{
         const todos = JSON.parse(localStorage.getItem("todoItems")) || [];
@@ -36,3 +38,7 @@ function validateAndStoreForm(){
     }
     return false
 }
+function checkAndGetLocation(){}
+function promptForLocation(){}
+function getWeather(){}
+function getWeatherData(lat, long){}

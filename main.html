@@ -6,9 +6,10 @@
     <link rel="stylesheet" href="main.css">
     <title>Bliss</title>
 </head>
-<body onload="getQuote();loadList();">
+<body onload="getQuote();loadList();checkAndGetLocation()">
     <div class="todo_card card">
-        <form name="todoForm" autocomplete="off" onsubmit="return validateAndStoreForm()">
+        <div id="todoError"></div>
+        <form name="todoForm" autocomplete="off" onsubmit="return validateAndStoreForm(event)">
             Description: <input type="text" name="Description" placeholder="Description">
             <input type="submit" value="Submit">
         </form>
@@ -17,7 +18,9 @@
         </div>
     </div>
     <div class="sidebox">
-        <div class="card_weather card">Weather</div>
+        <div class="card_weather card">
+            <buton onclick=getWeather()>Refresh Weather</buton>
+        </div>
         <div class="card_quote card">
             <p id="quoteBox"></p>
             <button id="quoteButton" onclick=getQuote()>Next</button>
