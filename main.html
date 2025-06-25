@@ -7,6 +7,11 @@
     <title>Bliss</title>
 </head>
 <body onload="getQuote();loadList();checkAndGetLocation()">
+    <header>
+        <h1>Bliss</h1>
+        <p>Welcome to Bliss, your personal productivity app.</p>
+    </header>
+    <div class="main_container">
     <div class="todo_card card">
         <div id="todoError"></div>
         <form name="todoForm" autocomplete="off" onsubmit="return validateAndStoreForm(event)">
@@ -22,9 +27,11 @@
             <buton onclick=getWeather()>Refresh Weather</buton>
         </div>
         <div class="card_quote card">
+            <h2>Quote Box</h2>
             <p id="quoteBox"></p>
             <button id="quoteButton" onclick=getQuote()>Next</button>
         </div>
+    </div>
     </div>
     <script src="main.js"></script>
 </body>
