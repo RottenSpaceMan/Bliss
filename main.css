@@ -1,6 +1,7 @@
 html,
 body {
     height: 100vh;
+    width: 100vw;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -11,30 +12,98 @@ body {
     background-repeat: no-repeat;
 
 }
-header{
+
+header {
     background-color: #2C3E50;
     color: white;
     padding: 10px;
-    margin-bottom: 50px;
     text-align: center;
     font-size: 1.5em;
 }
+
 .main_container {
-    background-color: #5A827E;
-    display: flexbox;
-    flex-direction: row;
+    margin:50px 0;
+    padding: 40px 0; 
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 50px;
+    grid-template-areas:
+        "todo_card card_weather"
+        "todo_card card_quote";
 }
 
-.todo_card{
-    height: 100%;
-    flex-basis: 50%;
-    border: 2px solid #ffffff;
-    background-color: #B9D4AA;
+.todo_card {
+    grid-area: todo_card;
 }
 
-.card_weather,.card_qoute {
-    height: 100%;
-    flex-basis: 50%;
+.card_weather {
+    grid-area: card_weather;
+}
+
+.card_quote {
+    grid-area: card_quote;
+}
+
+
+button {
+    display: block;
+    background-color: #2C3E50;
+    color: white;
+    border: white 2px solid;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+input{
+    display: block;
+    background-color: #2C3E50;
+    color: white;
+    border: white 2px solid;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+}
+.card {
     border: 2px solid #ffffff;
     background-color: #B9D4AA;
+    border-radius: 50px;
+    padding: 20px;
+    transform: scale(1.05);
+}
+
+.todo_card {
+    margin: 50px;
+}
+
+.card_weather,.card_quote {
+    margin: 50px;
+
+}
+
+.card_quote {
+    display: fixed;
+    min-height: 300px;
+}
+
+.card_weather {}
+
+#quoteBox {
+    display: block;
+    padding: 20px;
+    font-size: 1.2em;
+    color: #000000;
+    font-style: italic;
+    margin: 20px; 
+    align-content: center;
+    justify-content: center;
 }
