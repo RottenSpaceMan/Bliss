@@ -28,7 +28,6 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 50px;
     grid-template-areas:
         "todo_card card_weather"
         "todo_card card_quote";
