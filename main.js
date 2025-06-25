@@ -80,9 +80,8 @@ async function getWeatherData(lat, lon){
     document.getElementById("weather_data").innerHTML = 
     `
         <canvas id="weatherCanvas" width="200" height="100"></canvas>
-        <div class="temperature">${weather.current.temperature_2m}</div>
-        <div class="is_day">${(weather.current.is_day) ? `Day` : `Night`}</div>
-
+        <div class="temperature">${weather.current.temperature_2m}°C</div>
+        <div class="is_day">${weather.current.is_day ? `Day` : `Night`}</div>
     `
     drawWeather(weather.current.temperature_2m, weather.current.is_day)
 }
